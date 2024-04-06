@@ -16,7 +16,7 @@
 import math
 from abc import ABC, abstractmethod
 from dataclasses import dataclass
-from typing import Optional
+from typing import List, Dict, Optional
 
 from nltk import edit_distance
 
