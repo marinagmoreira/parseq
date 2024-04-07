@@ -50,7 +50,7 @@ def get_swa_lr_factor(warmup_pct, swa_epoch_start, div_factor=25, final_div_fact
     return _annealing_cos(1, 1 / (div_factor * final_div_factor), pct)
 
 
-@hydra.main(config_path='configs', config_name='main', version_base='1.2')
+@hydra.main(config_path='strhub/configs', config_name='main', version_base='1.2')
 def main(config: DictConfig):
     trainer_strategy = 'auto'
     with open_dict(config):

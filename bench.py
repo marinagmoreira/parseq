@@ -25,7 +25,7 @@ from torch.utils import benchmark
 
 
 @torch.inference_mode()
-@hydra.main(config_path='configs', config_name='bench', version_base='1.2')
+@hydra.main(config_path='strhub/configs', config_name='bench', version_base='1.2')
 def main(config: DictConfig):
     # For consistent behavior
     os.environ['CUBLAS_WORKSPACE_CONFIG'] = ':4096:8'

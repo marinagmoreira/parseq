@@ -133,19 +133,19 @@ The training script can train any supported model. You can override any configur
 ```
 
 ### Train a model variant/preconfigured experiment
-The base model configurations are in `configs/model/`, while variations are stored in `configs/experiment/`.
+The base model configurations are in `strhub/configs/model/`, while variations are stored in `strhub/configs/experiment/`.
 ```bash
 ./train.py +experiment=parseq-tiny  # Some examples: abinet-sv, trbc
 ```
 
 ### Specify the character set for training
 ```bash
-./train.py charset=94_full  # Other options: 36_lowercase or 62_mixed-case. See configs/charset/
+./train.py charset=94_full  # Other options: 36_lowercase or 62_mixed-case. See strhub/configs/charset/
 ```
 
 ### Specify the training dataset
 ```bash
-./train.py dataset=real  # Other option: synth. See configs/dataset/
+./train.py dataset=real  # Other option: synth. See strhub/configs/dataset/
 ```
 
 ### Change general model training parameters
@@ -163,7 +163,7 @@ The base model configurations are in `configs/model/`, while variations are stor
 ./train.py trainer.max_epochs=20 trainer.accelerator=gpu trainer.devices=2
 ```
 Note that you can pass any [Trainer parameter](https://pytorch-lightning.readthedocs.io/en/stable/common/trainer.html),
-you just need to prefix it with `+` if it is not originally specified in `configs/main.yaml`.
+you just need to prefix it with `+` if it is not originally specified in `strhub/configs/main.yaml`.
 
 ### Resume training from checkpoint (experimental)
 ```bash

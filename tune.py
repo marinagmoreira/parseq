@@ -130,7 +130,7 @@ def trainable(hparams, config):
     trainer.fit(model, datamodule=datamodule, ckpt_path=ckpt_path)
 
 
-@hydra.main(config_path='configs', config_name='tune', version_base='1.2')
+@hydra.main(config_path='strhub/configs', config_name='tune', version_base='1.2')
 def main(config: DictConfig):
     # Special handling for PARseq
     if config.model.get('perm_mirrored', False):
